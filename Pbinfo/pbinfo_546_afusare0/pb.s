@@ -1,5 +1,5 @@
 .data
-    formatstr: .asciz "%d"
+    formatstr: .asciz "%d/n"
     v: .long 7,4,9,6,2
     n: .long 5
     ultimelem: .long 0
