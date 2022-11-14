@@ -1,5 +1,5 @@
 .data
-    formatstr: .asciz "%d/n"
+    formatstr: .asciz "%d\n"
     v: .long 7,4,9,6,2
     n: .long 5
     ultimelem: .long 0
@@ -27,11 +27,13 @@ parcurgere_vector:
     jmp parcurgere_vector
 
 eprint:
+    push %ecx
     push %ebx
     push $formatstr
     call printf
     pop %ebx
     pop %ebx
+    pop %ecx
     jmp parcurgere_vector
 
 et_exit:
