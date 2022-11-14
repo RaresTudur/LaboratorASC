@@ -64,6 +64,7 @@ et_print:
     call printf
     pop %ebx
     pop %ebx
+   
     push $0
     call fflush
     pop %ebx
