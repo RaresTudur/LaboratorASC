@@ -58,16 +58,20 @@ tran_U:
     incl %ecx
     jmp et_loop
 et_print:
-    movl $0,%ecx
+    push %ecx
     push sir
     push $formatstringprint
     call printf
     pop %ebx
     pop %ebx
+<<<<<<< HEAD
    
     push $0
     call fflush
     pop %ebx
+=======
+    pop %ecx
+>>>>>>> 5876c11 (Version 1.1)
 et_exit:
     movl $1,%eax
     xor %ebx,%ebx
